@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الفواتير</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <details id="date-range" class="dropdown">
+        <summary>تسجيل الفواتير عن الفترة</summary>
+        <form id="date-range-form">
+            <label for="start-date">من تاريخ:</label>
+            <input type="date" id="start-date" required>
+            <label for="end-date">إلى تاريخ:</label>
+            <input type="date" id="end-date" required>
+            <button type="submit">تأكيد</button>
+        </form>
+    </details>
+
+    <h1>تسجيل الفواتير</h1>
+
+    <details id="sales-section" class="dropdown">
+        <summary>فواتير المبيعات</summary>
+        <div class="form-container">
+            <form id="sales-form">
+                <input type="text" id="sales-number" placeholder="رقم الفاتورة" required>
+                <input type="date" id="sales-date" required>
+                <input type="number" id="sales-amount" placeholder="القيمة قبل الضريبة" required>
+                <button type="submit">إضافة</button>
+            </form>
+        </div>
+        <table id="sales-list">
+            <thead>
+                <tr>
+                    <th>رقم الفاتورة</th>
+                    <th>التاريخ</th>
+                    <th>القيمة قبل الضريبة</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>إجمالي المبيعات: <span id="total-sales">0</span> ريال</h3>
+    </details>
+
+    <details id="purchases-section" class="dropdown">
+        <summary>فواتير المشتريات</summary>
+        <div class="form-container">
+            <form id="purchases-form">
+                <input type="text" id="purchases-number" placeholder="رقم الفاتورة" required>
+                <input type="date" id="purchases-date" required>
+                <input type="number" id="purchases-amount" placeholder="القيمة قبل الضريبة" required>
+                <button type="submit">إضافة</button>
+            </form>
+        </div>
+        <table id="purchases-list">
+            <thead>
+                <tr>
+                    <th>رقم الفاتورة</th>
+                    <th>التاريخ</th>
+                    <th>القيمة قبل الضريبة</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>إجمالي المشتريات: <span id="total-purchases">0</span> ريال</h3>
+    </details>
+
+    <details id="tax-report-section" class="dropdown">
+        <summary>تقرير ضريبة القيمة المضافة </summary>
+        <table>
+            <tr>
+                <th>إجمالي المبيعات</th>
+                <td id="total-sales-report">0</td>
+            </tr>
+            <tr>
+                <th>ضريبة المبيعات (15%)</th>
+                <td id="sales-tax">0</td>
+            </tr>
+            <tr>
+                <th>إجمالي المشتريات</th>
+                <td id="total-purchases-report">0</td>
+            </tr>
+            <tr>
+                <th>ضريبة المشتريات (15%)</th>
+                <td id="purchases-tax">0</td>
+            </tr>
+            <tr>
+                <th>صافي ضريبة القيمة المضافة</th>
+                <td id="net-vat">0</td>
+            </tr>
+        </table>
+    </details>
+<!-- Existing content -->
+    
+<footer>
+    <p>حقوق الملكية الفكرية © محمد عبدالمعز</p>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
